@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Typhlosion de Hisui</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+
+/* Pokémon seleccionado */
+.evo.active img {
+    border: 5px solid yellow;
+    box-shadow: 0 0 20px yellow;
+    transform: scale(1.1);
+}
+
+/* El texto que contiene la foto, pues la selección */
+.evo.active .evo-name {
+    color: yellow;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Usamos la fuente retro que hemos importado arriba */
+    font-family: 'Press Start 2P', monospace;
+    background-color: #e6d5bd;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.main {
+    /* DISEÑO RESPONSIVE: para que el texto y los márgenes 
+           se adapten según si el Alberto lo mira en el PC o en el móvil */
+    min-height: 100vh;
+    padding: 5vh 5vw;
+}
+
+/* TITULO */
+h1 {
+/* el clamp pone un tamaño mínimo, uno que esta bien que varía con la pantalla
+ y un máximo. Así el título nunca es gigante ni minúsculo. */    
+    text-align: center;
+    font-size: clamp(20px, 4vw, 40px);
+    margin-bottom: 5vh;
+}
+
+/* CONTENIDO PRINCIPAL, Para alinear la imagen y el texto a los lados sin usar tablas raras */
+.content {
+    display: flex;
+    align-items: center;
+    gap: 5vw; /* Crea un espacio de separación automático entre los elementos */
+    flex-wrap: wrap; /* Si no cabe, que el texto baje debajo de la imagen */
+    justify-content: center;
+}
+
+.pokemon-img {
+    width: clamp(120px, 20vw, 250px);
+}
+
+.info {
+    max-width: 600px;
+    font-size: clamp(10px, 1.2vw, 16px);
+}
+
+/* TIPO */
+.tipo {
+    margin-bottom: 20px;
+}
+
+.badge {
+    background-color: orange;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin-right: 5px;
+}
+
+.badge.ghost {
+    background-color: purple;
+    color: white;
+}
+
+/* BOTON */
+.boton {
+    display: block;
+    margin: 5vh auto;
+    background: red;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: clamp(10px, 1.2vw, 16px);
+    width: fit-content; /* El ancho se ajusta solo al texto que haya dentro */
+}
+
+/* ------------------- */
+/* EVOLUCIONES */
+/* ------------------- */
+
+.evoluciones {
+    /* Este crea el efecto de rayas diagonales 
+        repitiendo dos colores cada 10 y 20 píxeles. */
+    background: repeating-linear-gradient(
+        135deg,
+        #666,
+        #666 10px,
+        #6f6f6f 10px,
+        #6f6f6f 20px
+    );
+    padding: 40px 20px;
+    color: white;
+}
+
+.evoluciones h2 {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.evo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.evo {
+/* transition hace que el cambio de tamaño al pasar el ratón sea como chill como suave */
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.evo:hover {
+    transform: scale(1.05);
+}
+
+.evo img {
+    width: clamp(100px, 15vw, 180px);
+    border-radius: 50%; /* Esto hace que la imagen sea un circulito perfecto para que quede pro*/
+    border: 5px solid white;
+    background: #555;
+    padding: 10px;
+}
+
+.arrow {
+    font-size: 40px;
+}
+
+.evo-name {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.evo-type {
+    margin-top: 10px;
+    background: orange;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    /* los span ignoran los márgenes de arriba y abajo. Al poner 'inline-block',
+      deja que le demos altura y espacio sin que deje de estar uno al lado del otro. */
+    font-size: 12px;
+}
+
+.ghost {
+    background: purple;
+}
+</style>
+</head>
+
+<body>
+
+<div class="main">
+
+    <h1>Typhlosion de Hisui</h1>
+
+    <div class="content">
+        <img src="typhlosion-hisui.png" class="pokemon-img">
+
+        <div class="info">
+            <div class="tipo">
+                Tipo: <span class="badge">fuego</span><span class="badge ghost">fantasma</span>
+            </div>
+
+            <p>
+                <strong>Descripción:</strong><br><br>
+                Se dice que purifica las almas perdidas con sus llamas del más allá antes de guiarlas
+                al descanso eterno. A diferencia de su forma habitual, posee un temperamento
+                mucho más calmado y melancólico.
+            </p>
+        </div>
+    </div>
+
+    <a href="index.html" class="boton">Volver a inicio</a>
+
+</div>
+
+<div class="evoluciones">
+
+    <h2>Evoluciones</h2>
+
+    <div class="evo-container">
+
+        <a href="cyndaquil.html" class="evo">
+            <img src="cyndaquil.png">
+            <div class="evo-name">Cyndaquil N.º 0155</div>
+            <div class="evo-type">Fuego</div>
+        </a>
+
+        <div class="arrow">›</div>
+
+        <a href="quilava.html" class="evo">
+            <img src="quilava.png">
+            <div class="evo-name">Quilava N.º 0156</div>
+            <div class="evo-type">Fuego</div>
+        </a>
+
+        <div class="arrow">›</div>
+
+        <a href="typhlosion.html" class="evo">
+            <img src="typhlosion.png">
+            <div class="evo-name">Typhlosion N.º 0157</div>
+            <div class="evo-type">Fuego</div>
+        </a>
+
+        <a href="typhlosion-hisui.html" class="evo active">
+            <img src="typhlosion-hisui.png">
+            <div class="evo-name">Typhlosion N.º 0157</div>
+            <div>
+                <span class="evo-type">Fuego</span>
+                <span class="evo-type ghost">Fantasma</span>
+            </div>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

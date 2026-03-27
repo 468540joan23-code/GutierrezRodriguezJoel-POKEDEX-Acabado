@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Gengar</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+
+/* Pokémon seleccionado */
+.evo.active img {
+    border: 5px solid yellow;
+    box-shadow: 0 0 20px yellow;
+    transform: scale(1.1);
+}
+
+.evo.active .evo-name {
+    color: yellow;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Press Start 2P', monospace;
+    background-color: #e6d5bd;
+}
+
+.main {
+    min-height: 100vh;
+    padding: 5vh 5vw;
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(20px, 4vw, 40px);
+    margin-bottom: 5vh;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon-img {
+    width: clamp(150px, 25vw, 300px);
+}
+
+.info {
+    max-width: 600px;
+    font-size: clamp(10px, 1.2vw, 16px);
+}
+
+.tipo {
+    margin-bottom: 20px;
+}
+
+.badge {
+    background-color: purple;
+    padding: 5px 10px;
+    border-radius: 6px;
+    margin-right: 5px;
+    color: white;
+}
+
+.boton {
+    display: block;
+    margin: 5vh auto;
+    background: red;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: clamp(10px, 1.2vw, 16px);
+    width: fit-content;
+}
+
+/* EVOLUCIONES */
+
+.evoluciones {
+    background: repeating-linear-gradient(
+        135deg,
+        #666,
+        #666 10px,
+        #6f6f6f 10px,
+        #6f6f6f 20px
+    );
+    padding: 40px 20px;
+    color: white;
+}
+
+.evo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.evo {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.evo:hover {
+    transform: scale(1.05);
+}
+
+.evo img {
+    width: clamp(100px, 15vw, 160px);
+    border-radius: 50%;
+    border: 5px solid white;
+    background: #555;
+    padding: 10px;
+}
+
+.arrow {
+    font-size: 40px;
+}
+
+.evo-name {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.evo-type {
+    margin-top: 10px;
+    background: purple;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 12px;
+    color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="main">
+
+    <h1>Gengar</h1>
+
+    <div class="content">
+        <img src="gengar.png" class="pokemon-img">
+
+        <div class="info">
+            <div class="tipo">
+                Tipo: 
+                <span class="badge">Fantasma</span>
+                <span class="badge">Veneno</span>
+            </div>
+
+            <p>
+                <strong>Descripción:</strong><br><br>
+                Gengar se esconde en las sombras y absorbe el calor de su entorno.
+                Si sientes un escalofrío repentino, puede que esté cerca observándote
+                con una sonrisa traviesa.
+            </p>
+        </div>
+    </div>
+
+    <a href="index.html" class="boton">Volver a inicio</a>
+
+</div>
+
+<!-- EVOLUCIONES -->
+<div class="evoluciones">
+
+    <h2>Evoluciones</h2>
+
+    <div class="evo-container">
+
+        <!-- GASTLY -->
+        <a href="gastly.html" class="evo">
+            <img src="gastly.png">
+            <div class="evo-name">Gastly N.º 0092</div>
+            <div class="evo-type">Fantasma</div>
+        </a>
+
+        <div class="arrow">›</div>
+
+        <!-- HAUNTER -->
+        <a href="haunter.html" class="evo">
+            <img src="haunter.png">
+            <div class="evo-name">Haunter N.º 0093</div>
+            <div class="evo-type">Fantasma</div>
+        </a>
+
+        <div class="arrow">›</div>
+
+        <!-- GENGAR -->
+        <a href="gengar.html" class="evo active">
+            <img src="gengar.png">
+            <div class="evo-name">Gengar N.º 0094</div>
+            <div class="evo-type">Fantasma</div>
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

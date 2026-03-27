@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Mew</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Press Start 2P', monospace;
+    background-color: #e6d5bd;
+}
+
+.main {
+    min-height: 100vh;
+    padding: 5vh 5vw;
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(20px, 4vw, 40px);
+    margin-bottom: 5vh;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon-img {
+    width: clamp(150px, 25vw, 300px);
+}
+
+.info {
+    max-width: 600px;
+    font-size: clamp(10px, 1.2vw, 16px);
+}
+
+.tipo {
+    margin-bottom: 20px;
+}
+
+.badge {
+    background-color: #f8a5c2; /* rosa psíquico */
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: black;
+}
+
+.boton {
+    display: block;
+    margin: 5vh auto;
+    background: red;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: clamp(10px, 1.2vw, 16px);
+    width: fit-content;
+}
+
+/* SECCIÓN SIN EVOLUCIONES */
+.evoluciones {
+    background: repeating-linear-gradient(
+        135deg,
+        #666,
+        #666 10px,
+        #6f6f6f 10px,
+        #6f6f6f 20px
+    );
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+}
+
+.evoluciones h2 {
+    margin-bottom: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="main">
+
+    <h1>Mew</h1>
+
+    <div class="content">
+        <img src="mew.png" class="pokemon-img">
+
+        <div class="info">
+            <div class="tipo">
+                Tipo: <span class="badge">Psíquico</span>
+            </div>
+
+            <p>
+                <strong>Descripción:</strong><br><br>
+                Mew es un Pokémon extremadamente raro que contiene el ADN de todos
+                los Pokémon existentes. Es capaz de aprender cualquier movimiento
+                y suele aparecer solo ante entrenadores de corazón puro.
+            </p>
+        </div>
+    </div>
+
+    <a href="index.html" class="boton">Volver a inicio</a>
+
+</div>
+
+<!-- SIN EVOLUCIONES -->
+<div class="evoluciones">
+    <h2>Este Pokémon no tiene evoluciones</h2>
+</div>
+
+</body>
+</html>
